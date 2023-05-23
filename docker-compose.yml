@@ -1,0 +1,9 @@
+version: '3' # docker version
+services:
+  www:
+    image: php:apache
+    volumes:
+      - "./:/var/www/html" #sync local project dir with container web dir using : operator
+      ports:
+        -80:80
+        -443:443 # for future ssl traffic
